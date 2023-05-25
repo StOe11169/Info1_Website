@@ -14,7 +14,7 @@ body {
     cursor: pointer;
 }
 
-/* .slider {         Never Used
+ .slider {
      -webkit-appearance: none;
      width: 80px;
      height: 6px;
@@ -26,4 +26,17 @@ body {
      transition: opacity .2s;
  }
 
- */
+ .simCanvas {
+     border:2px solid;
+     display: flex;
+     min-height: 75vh;
+     min-width: 75vw;
+ }
+
+ .controlPanel {
+     display: flex;
+     width: 20vw;
+     height: auto;
+ }
+
+

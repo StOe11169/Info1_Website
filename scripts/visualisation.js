@@ -1,4 +1,4 @@
-var canvas = document.getElementById("myCanvas");                         //Opens 2D Canvas API
+var canvas = document.getElementById("eulerCanvas");                         //Opens 2D Canvas API
 var canvas2DContext = canvas.getContext("2d");
 canvas.width = window.innerWidth - 20;          //TODO Make changeable
 canvas.height = window.innerHeight - 100;      //TODO Make changeable
