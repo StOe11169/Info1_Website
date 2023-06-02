@@ -8,10 +8,13 @@
           integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <link rel="stylesheet" href="styles/sidebar.css">
     <link href="styles/simulator.css" rel="stylesheet">
+    <link href="styles/style.css" rel="stylesheet">
 </head>
 <body>
+<div class="page-container">
 
 
+<div  class="nav-container">
 <h1>Hello, I'm Euler!</h1>
 <?php include('elements/navbar.php') ?>
 
@@ -22,11 +25,14 @@
         <li class="breadcrumb-item active" aria-current="page">Euler Simulator</li>
     </ol>
 </nav>
+</div>
 
-<div>
+
+<div class="content-container"> <!--All elements below Navbar and Breadcrumb inside this -->
+
     <!-- Sidebar -->
-    <div class="bg-light border-right vh-100" id="sidebar-wrapper">
-        <div class="sidebar-heading">Start Bootstrap</div>
+    <div class="bg-light border-right vh-30 sidebar-wrapper side-nav">
+
         <div class="list-group list-group-flush overflow-auto h-100">
             <a href="#" class="list-group-item list-group-item-action bg-light">Dashboard</a>
             <a href="#" class="list-group-item list-group-item-action bg-light">Menu 1</a>
@@ -35,7 +41,8 @@
         </div>
     </div>
 
-    <div id="page-content-wrapper">
+    <!--Page Conteent -->
+    <div class="simulator-wrapper">
 
     <!--Sim Control Panel -->
     <div class="controlPanel">
@@ -45,20 +52,17 @@
         <button class="button" onclick="setupScene(2)">Paint</button>
         <input class="slider" id="densitySlider" max="10000" min="500" type="range" value="1000">
         <input class="slider" id="viscositySlider" max="0.0001" min="0.00000000000001" type="range" value="0.0000001">
-        <input id="streamButton" onclick="scene.showStreamlines = !scene.showStreamlines" type="checkbox">Streamlines
-        <input id="velocityButton" onclick="scene.showVelocities = !scene.showVelocities" type="checkbox">Velocities
-        <input id="pressureButton" name="field" onclick="scene.showPressure = !scene.showPressure;" type="checkbox">
+        <input class="checkbox" id="streamButton" onclick="scene.showStreamlines = !scene.showStreamlines" type="checkbox">Streamlines
+        <input class="checkbox" id="velocityButton" onclick="scene.showVelocities = !scene.showVelocities" type="checkbox">Velocities
+        <input class="checkbox" id="pressureButton" name="field" onclick="scene.showPressure = !scene.showPressure;" type="checkbox">
         Pressure
         <input checked id="smokeButton" name="field" onclick="scene.showSmoke = !scene.showSmoke;" type="checkbox">Smoke
         <input checked id="overrelaxButton" onclick="scene.overRelaxation = scene.overRelaxation === 1.0 ? 1.9 : 1.0"
-               type="checkbox">Overrelax>
+               type="checkbox">Overrelax
     </div>
 
     <!-- Sim Canvas -->
     <div>
-
-
-
         <canvas class="simCanvas" id="eulerCanvas"></canvas>
         <script src="scripts/FluidSim.js"></script>
         <script src="scripts/visualisation.js"></script>
@@ -83,11 +87,10 @@
 
         </script>
     </div>
+        <!--End of Canvas -->
     </div>
-
-
-
-
+    <!--End Page Content and content-container -->
+</div>
 </div>
 
 

@@ -27,9 +27,7 @@ var viscositySlider = document.getElementById("viscositySlider");
 var viscosityValue = 0.0000001;
 
 viscositySlider.oninput = function () {
-    viscosityValue = viscositySlider.value;
-    console.log("Diff: viscVal - viscSliderVal. Should be 0, if not rip")
-    console.log(viscosityValue - viscositySlider.value);
+    viscosityValue = viscositySlider.value
 }
 
 
