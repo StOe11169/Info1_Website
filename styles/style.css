@@ -1,19 +1,144 @@
-.page-container{
+/*----- Wrappers to align Main page parts -----*/
+
+.page-wrapper{
     display: flex;
     flex-direction: column;
+    height: 100vh;
 }
 
-.content-container{
+.header-wrapper{
+    flex: 0 0 20vh; /*Syntax: flex: flexgrow flexshrink  height*/
+    background-color: greenyellow;
+}
+
+.content-wrapper{
+    background-color: blue;
+    flex: 1 0 70vh; /* 70% of viewport height */
+    overflow-y: scroll; /* Enable vertical scrolling */
+}
+
+.footer-wrapper{
+    background-color: gray;
+    flex: 0 0 10vh; /* 10% of viewport height */
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/*----- Upper Navbar and Breadcrumb -----*/
+
+.navbar .navbar-brand {
+    margin-left: 0;
+}
+
+.breadcrumb .breadcrumb-item:first-child {
+    padding-left: 0;
+}
+
+
+
+
+
+
+/*------------------------------------------------*/
+
+
+
+
+
+
+
+
+
+.accordion{
+    width: 80vw;
+}
+
+.sub-heading{
+    width: 90rem;
+    padding-left: 0px;
+}
+
+.sidenav{
+    width: 100%;
+    padding-top: 1px;
+    background-color: #f1f1f1;
+}
+
+.sidenav-wrapper{
+    width: 10vw;
+    background-color: #f1f1f1;
+    border: 2px red;
+    height: 100vw;
+}
+
+.side-nav-link.active {
+    background-color: darkgray;
+    /* Add other styles for the active state */
+}
+
+.right-hand-buffer{
+    width: 100%;
+    background-color: #f1f1f1;
+    border: 2px red;
+    height: 100vw;
+}
+
+/* Adjust the width of sub-accordion elements with IDs starting with "sub-accordion-" */
+[id^="sub-accordion-"] {
+    width: 100%;
+    max-width: 100%;
+}
+
+/* Custom styles for active list-items */
+.list-group-item[id^="side-nav-"].active {
+
+    background-color: darkgray;
+    color: black;
+    /* Add more custom styles as needed */
+}
+
+
+/*Content tiles */
+.card-wrapper{
     display: flex;
+    justify-content: space-evenly;
+    min-width: 80vw;
 }
 
-.nav-container{
 
+.tile {
+    width: 30vw;
+    height: 30vw;
+    transition: transform 0.3s ease-in-out;
+    display: block;
+    justify-content: center;
+}
+
+.tile:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.tile .card-img-top {
+    transition: opacity 0.3s ease-in-out;
+}
+
+.tile:hover .card-img-top {
+    opacity: 0;
 }
 
 
 
-.simulator-wrapper{
+/*Button Styles */
 
+.scroll-to-top-btn {
+    height: 100%;
+    padding: 0;
 }
+
+
 

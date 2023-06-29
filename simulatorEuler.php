@@ -11,7 +11,7 @@
     <link href="styles/style.css" rel="stylesheet">
 </head>
 <body>
-<div class="page-container">
+<div class="page-wrapper">
 
 
 <div  class="nav-container">
@@ -28,7 +28,7 @@
 </div>
 
 
-<div class="content-container"> <!--All elements below Navbar and Breadcrumb inside this -->
+<div class="content-wrapper"> <!--All elements below Navbar and Breadcrumb inside this -->
 
     <!-- Sidebar -->
     <div class="bg-light border-right vh-30 sidebar-wrapper side-nav">
