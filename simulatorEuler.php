@@ -28,7 +28,7 @@
 </div>
 
 
-<div class="content-wrapper"> <!--All elements below Navbar and Breadcrumb inside this -->
+<div class="main-wrapper"> <!--All elements below Navbar and Breadcrumb inside this -->
 
     <!-- Sidebar -->
     <div class="bg-light border-right vh-30 sidebar-wrapper side-nav">

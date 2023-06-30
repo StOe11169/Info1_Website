@@ -1,26 +1,35 @@
-/*----- Wrappers to align Main page parts -----*/
+/*----- Wrappers to align main-page parts -----*/
 
-.page-wrapper{
+.page-wrapper {
     display: flex;
     flex-direction: column;
     height: 100vh;
 }
 
-.header-wrapper{
-    flex: 0 0 20vh; /*Syntax: flex: flexgrow flexshrink  height*/
+.header-wrapper {
+    flex: 0 0 10vh; /*Syntax: flex: flexgrow flexshrink  height*/
     background-color: greenyellow;
+    border: solid 2px #606060;
+    border-bottom: solid 1px #606060;;
 }
 
-.content-wrapper{
-    background-color: blue;
-    flex: 1 0 70vh; /* 70% of viewport height */
+.main-wrapper {
+    display: flex;
+    background-color: aliceblue;
+    flex: 1 0 80vh; /* 80% of viewport height */
     overflow-y: scroll; /* Enable vertical scrolling */
+    border: solid 2px #606060;
+    border-bottom: solid 1px #606060;;
 }
 
-.footer-wrapper{
+.footer-wrapper {
+    display: flex;
     background-color: gray;
-    flex: 0 0 10vh; /* 10% of viewport height */
+    flex: 0 0 5vh;
+    border: solid 2px #606060;
 }
+
+
 
 html, body {
     height: 100%;
@@ -28,7 +37,7 @@ html, body {
     padding: 0;
 }
 
-/*----- Upper Navbar and Breadcrumb -----*/
+/*----- Header-sectionUpper Navbar and Breadcrumb -----*/
 
 .navbar .navbar-brand {
     margin-left: 0;
@@ -39,40 +48,21 @@ html, body {
 }
 
 
+/*----- Main Section -----*/
 
-
-
-
-/*------------------------------------------------*/
-
-
-
-
-
-
-
-
-
-.accordion{
-    width: 80vw;
+/*----- Side navigation bar -----*/
+.sidenav-wrapper {
+    background-color: deeppink;
+    width: 10vw;
+    height: 100%;
+    border: solid 2px #606060;
 }
 
-.sub-heading{
-    width: 90rem;
-    padding-left: 0px;
-}
-
-.sidenav{
+.sidenav {
     width: 100%;
+    height: 100%;
     padding-top: 1px;
     background-color: #f1f1f1;
-}
-
-.sidenav-wrapper{
-    width: 10vw;
-    background-color: #f1f1f1;
-    border: 2px red;
-    height: 100vw;
 }
 
 .side-nav-link.active {
@@ -80,12 +70,46 @@ html, body {
     /* Add other styles for the active state */
 }
 
-.right-hand-buffer{
-    width: 100%;
-    background-color: #f1f1f1;
-    border: 2px red;
-    height: 100vw;
+
+/*----- Central content -----*/
+
+.center-wrapper{
+    flex: 1;    /* Allow the center wrapper to grow and take remaining space */
+    background-color: yellow;
+    border: solid 2px #606060;
 }
+
+/*----- Right hand buffer and utility -----*/
+.right-hand-buffer{
+    width: 10vw;
+    background-color: purple;
+    height: 100vh;
+}
+
+/*----- Footer -----*/
+
+.footer-left{
+
+}
+
+.footer-right{
+    text-align: right;
+}
+
+/*----- Button Styling -----*/
+
+
+.accordion {
+    width: 80vw;
+}
+
+.sub-heading {
+    width: 90rem;
+    padding-left: 0px;
+}
+
+
+
 
 /* Adjust the width of sub-accordion elements with IDs starting with "sub-accordion-" */
 [id^="sub-accordion-"] {
@@ -103,7 +127,7 @@ html, body {
 
 
 /*Content tiles */
-.card-wrapper{
+.card-wrapper {
     display: flex;
     justify-content: space-evenly;
     min-width: 80vw;
@@ -130,7 +154,6 @@ html, body {
 .tile:hover .card-img-top {
     opacity: 0;
 }
-
 
 
 /*Button Styles */

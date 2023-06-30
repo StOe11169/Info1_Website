@@ -21,7 +21,7 @@
     </ol>
 </nav>
 
-<div class="content-wrapper">
+<div class="main-wrapper">
     <!--All elements below Navbar and Breadcrumb inside this. Wraps everything inside a flex-box -->
 
     <!-- Sidebar Navigation-->
