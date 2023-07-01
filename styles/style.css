@@ -1,28 +1,28 @@
 /*----- Wrappers to align main-page parts -----*/
 
-.page-wrapper {
+.page-wrapper {    /*Wraps entire page in a flex-container */
     display: flex;
     flex-direction: column;
     height: 100vh;
 }
 
-.header-wrapper {
+.header-wrapper {   /*Wraps navbar and breadcrumb in a flex-container */
     flex: 0 0 10vh; /*Syntax: flex: flexgrow flexshrink  height*/
     background-color: greenyellow;
     border: solid 2px #606060;
     border-bottom: solid 1px #606060;;
 }
 
-.main-wrapper {
+.main-wrapper {     /*Wraps main page content in a flex-container */
     display: flex;
-    background-color: aliceblue;
+    background-color: cornflowerblue;
     flex: 1 0 80vh; /* 80% of viewport height */
     overflow-y: scroll; /* Enable vertical scrolling */
     border: solid 2px #606060;
-    border-bottom: solid 1px #606060;;
+    border-bottom: solid 1px #606060;
 }
 
-.footer-wrapper {
+.footer-wrapper {       /*wraps footer in a flex-container to make it easier to make it stick to the bottom*/
     display: flex;
     background-color: gray;
     flex: 0 0 5vh;
@@ -31,7 +31,7 @@
 
 
 
-html, body {
+html, body {            /*Ensure html-page and body take up the whole viewport*/
     height: 100%;
     margin: 0;
     padding: 0;
@@ -52,17 +52,21 @@ html, body {
 
 /*----- Side navigation bar -----*/
 .sidenav-wrapper {
-    background-color: deeppink;
-    width: 10vw;
+    background-color: yellow;
+    width: auto;
+    min-width: 10vw;
+    flex-shrink: 0;
     height: 100%;
     border: solid 2px #606060;
+    overflow-x: auto;
 }
 
 .sidenav {
-    width: 100%;
+    width: fit-content;
+    min-width: 10vw;
     height: 100%;
     padding-top: 1px;
-    background-color: #f1f1f1;
+    background-color: cadetblue;
 }
 
 .side-nav-link.active {
@@ -89,16 +93,31 @@ html, body {
 /*----- Footer -----*/
 
 .footer-left{
+    display: flex;
+    align-items: center;
+
+}
+
+.footer-left .scroll-to-top-btn{
 
 }
 
 .footer-right{
     text-align: right;
+
+}
+
+.footer-right span {
+    display: inline;
+    margin-right: 2%;
+    vertical-align: middle;
 }
 
 /*----- Button Styling -----*/
 
 
+
+/*-----Glossary and navbar accordions -----*/
 .accordion {
     width: 80vw;
 }
@@ -107,9 +126,6 @@ html, body {
     width: 90rem;
     padding-left: 0px;
 }
-
-
-
 
 /* Adjust the width of sub-accordion elements with IDs starting with "sub-accordion-" */
 [id^="sub-accordion-"] {
@@ -161,6 +177,7 @@ html, body {
 .scroll-to-top-btn {
     height: 100%;
     padding: 0;
+    margin-left: 2%;
 }
 
 
