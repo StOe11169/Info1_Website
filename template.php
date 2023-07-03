@@ -19,8 +19,8 @@
 
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="index.php">Home</a></li>
-                <li class="breadcrumb-item"><a href="glossary.php">Glossary</a></li>
+                <li class="breadcrumb-item"><a href="oldpages/oldindex.php">Home</a></li>
+                <li class="breadcrumb-item"><a href="oldpages/oldglossary.php">Glossary</a></li>
             </ol>
         </nav>
 
@@ -39,10 +39,12 @@
             </nav>
         </div>
 
+        <!------Main Page Content -->
         <div class="center-wrapper">
 
         </div>
 
+        <!--Righthand spacer to align Page content -->
         <div class="right-hand-buffer">
 
         </div>

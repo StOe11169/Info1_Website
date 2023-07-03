@@ -9,11 +9,11 @@
       <ul class="navbar-nav">
 
         <li class="nav-item">
-          <a class="nav-link" href="/index.php">Home</a>
+          <a class="nav-link" href="/oldpages/oldindex.php">Home</a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="/resources.php">Resources</a>
+          <a class="nav-link" href="/oldpages/oldresources.php">Resources</a>
         </li>
 
 
@@ -22,14 +22,14 @@
             Simulators
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="/simulatorEuler.php">Eulerian</a>
-            <a class="dropdown-item" href="/simulatorFlip.php">FLIP</a>
+            <a class="dropdown-item" href="/oldpages/oldsimulatorEuler.php">Eulerian</a>
+            <a class="dropdown-item" href="/oldpages/oldsimulatorFlip.php">FLIP</a>
 
           </div>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="/glossary.php">Glossary</a>
+          <a class="nav-link" href="/oldpages/oldglossary.php">Glossary</a>
         </li>
       </ul>
 

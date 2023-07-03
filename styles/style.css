@@ -21,6 +21,7 @@
 
 .main-wrapper {     /*Wraps main page content in a flex-container */
     display: flex;
+    flex-wrap: nowrap;
     background-color: cornflowerblue;
     flex: 1 0 80vh; /* 80% of viewport height */
     border: solid 2px #606060;
@@ -94,7 +95,8 @@ html, body {            /*Ensure html-page and body take up the whole viewport*/
 
 /*----- Right hand buffer and utility -----*/
 .right-hand-buffer{
-    width: 10vw;
+    min-width: 10vw;
+    flex: 0 0 auto;
     background-color: purple;
     height: 100vh;
 }
@@ -128,7 +130,8 @@ html, body {            /*Ensure html-page and body take up the whole viewport*/
 
 /*-----Glossary and navbar accordions -----*/
 .accordion {
-    width: 80vw;
+    width: fit-content;
+    min-width: 10vw;
 }
 
 .sub-heading {
@@ -188,6 +191,10 @@ html, body {            /*Ensure html-page and body take up the whole viewport*/
     padding: 0;
     margin-left: 2%;
     display: none;
+}
+
+close-accordions-btn{
+
 }
 
 

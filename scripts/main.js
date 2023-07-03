@@ -51,3 +51,25 @@ function scrollToTop() {
     document.body.scrollTop = 0; // For Safari
     document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 }
+
+
+// Close all Accordions
+
+// Get all collapse elements
+let collapseElements = document.querySelectorAll('.accordion-collapse');
+
+// Close all collapse elements
+let closeAllAccordions = () => {
+    collapseElements.forEach((collapse) => {
+        const bsCollapse = new bootstrap.Collapse(collapse, {
+            toggle: false
+        });
+        bsCollapse.hide();
+    });
+};
+
+// Attach click event listener to all buttons with the class 'close-accordions-btn'
+const closeAccordionsBtns = document.querySelectorAll('.close-accordions-btn');
+closeAccordionsBtns.forEach((button) => {
+    button.addEventListener('click', closeAllAccordions);
+});
