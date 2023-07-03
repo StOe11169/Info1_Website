@@ -55,7 +55,7 @@
 
 </div>
 
-<script src="scripts/buttonReaction.js"></script>
+<script src="scripts/main.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
 
 </body>

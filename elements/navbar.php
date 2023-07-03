@@ -31,8 +31,10 @@
         <li class="nav-item">
           <a class="nav-link" href="/glossary.php">Glossary</a>
         </li>
-
       </ul>
+
+      <button onclick="scrollToTop()" id="scrollToTopBtnHeader" class="scroll-to-top-btn btn btn-primary ms-auto" title="Go to top">Back up</button>
+
     </div>
   </div>
 </nav>

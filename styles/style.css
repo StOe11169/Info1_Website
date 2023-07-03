@@ -11,13 +11,18 @@
     background-color: greenyellow;
     border: solid 2px #606060;
     border-bottom: solid 1px #606060;;
+
+    /* Test Section */
+    position: sticky;
+    top: 0;
+    z-index: 100;
+
 }
 
 .main-wrapper {     /*Wraps main page content in a flex-container */
     display: flex;
     background-color: cornflowerblue;
     flex: 1 0 80vh; /* 80% of viewport height */
-    overflow-y: scroll; /* Enable vertical scrolling */
     border: solid 2px #606060;
     border-bottom: solid 1px #606060;
 }
@@ -27,6 +32,10 @@
     background-color: gray;
     flex: 0 0 5vh;
     border: solid 2px #606060;
+    margin-top: auto;
+
+
+
 }
 
 
@@ -178,6 +187,17 @@ html, body {            /*Ensure html-page and body take up the whole viewport*/
     height: 100%;
     padding: 0;
     margin-left: 2%;
+    display: none;
+}
+
+
+
+/*----- Testing Stuff -----*/
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100% ;
 }
 
 
