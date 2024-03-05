@@ -10,7 +10,7 @@
 //! These are handled in the applyBoundaryCondition()-Method! This is to accuratly model fluid behaviour at the boundaries. I.e "no slip"-condition
 
 
-class FluidSim {
+class FluidSimEuler {
     //! Dividing by this.cellSize leads to NaN errors.
     constructor(density, numX, numY, simulationCellSize, viscosity) {
         this.density = density;
@@ -207,7 +207,7 @@ class FluidSim {
 
     addGravity(dt, gravity)                              //adds gravity to v-component (vertical/Y) of all cells, updates vertical velocity
     {
-        var n = this.numYCells;                              //! Start loops at 1, for fucks sake!
+        var n = this.numYCells;
         for (var i = 1; i < this.numXCells; i++) {			//go through all X-Cells (rows)
             for (var j = 1; j < this.numYCells - 1; j++) {		//go through all Y-Cells (collumns) in that row
                 if (this.cellType[i * n + j] != 0.0 && this.cellType[i * n + j - 1] != 0.0)		//adds gravity if current and next cell are not walls (s!=0.0)

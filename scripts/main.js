@@ -15,6 +15,11 @@ window.addEventListener('scroll', function() {
 });
 
 
+// Event listener for accordion item clicks
+
+
+
+
 
 
 
@@ -53,7 +58,8 @@ function scrollToTop() {
 }
 
 
-// Close all Accordions
+
+// ----------------------Close all Accordions Functionality --------------------------
 
 // Get all collapse elements
 let collapseElements = document.querySelectorAll('.accordion-collapse');
@@ -73,3 +79,95 @@ const closeAccordionsBtns = document.querySelectorAll('.close-accordions-btn');
 closeAccordionsBtns.forEach((button) => {
     button.addEventListener('click', closeAllAccordions);
 });
+
+//Accordion button visibility
+document.addEventListener('DOMContentLoaded', function () {
+    const accordions = document.querySelectorAll('.accordion-collapse');
+    const closeAllBtn = document.getElementById('close-all-btn');
+
+    // Function to check if any accordion is expanded
+    function checkAccordions() {
+        let isOpen = false;
+        accordions.forEach(function (accordion) {
+            if (accordion.classList.contains('show')) {
+                isOpen = true;
+            }
+        });
+        return isOpen;
+    }
+
+    // Function to toggle the visibility of the "Close all" button
+    function toggleCloseAllBtn() {
+        if (checkAccordions()) {
+            closeAllBtn.style.display = 'block';
+        } else {
+            closeAllBtn.style.display = 'none';
+        }
+    }
+
+
+
+
+    // Event listener for accordion state changes
+    accordions.forEach(function (accordion) {
+        accordion.addEventListener('show.bs.collapse', function () {
+            toggleCloseAllBtn();
+        });
+        accordion.addEventListener('hide.bs.collapse', function () {
+            toggleCloseAllBtn();
+        });
+    });
+
+    // Event listener for "Close all" button click
+    closeAllBtn.addEventListener('click', function () {
+        accordions.forEach(function (accordion) {
+            accordion.classList.remove('show');
+        });
+        toggleCloseAllBtn();
+    });
+});
+
+//----------------------------------------------------------------------------------
+
+
+
+//active nav-item highlighting
+document.addEventListener("DOMContentLoaded", function() {
+    // Get the current page path
+    let currentPath = window.location.pathname;
+
+    // Get all nav links
+    let navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+
+    // Loop through nav links and add 'active' class to the appropriate one
+    navLinks.forEach(function(link) {
+        // Extract the href path and compare with the current path
+        let linkPath = new URL(link.href).pathname;
+
+        // Output current path and link path to console
+        console.log("Current path:", currentPath);
+        console.log("Link path:", linkPath);
+
+        if (linkPath === currentPath) {
+            link.classList.add('active');
+        }
+    });
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

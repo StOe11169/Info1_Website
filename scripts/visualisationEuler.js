@@ -42,11 +42,11 @@ function simToCanvasY(y) {		//converts simulation coordinates into canvas coordi
 
 var scene =			                            //TODO Make this into diffrent functions/options, first 1 example then in database
     {
-        gravity: -9.81,			                //TODO Make Changeable and part of FluidSim
-        dt: 1.0 / 100.0,		                //TODO Make Changeable to show its effects on simulation collapse. Make port of FluidSim
+        gravity: -9.81,			                //TODO Make Changeable and part of FluidSimEuler
+        dt: 1.0 / 100.0,		                //TODO Make Changeable to show its effects on simulation collapse. Make port of FluidSimEuler
         numIters: 100,
         frameNr: 0,
-        overRelaxation: 1.9,		            //TODO Make Changeable and part of FluidSim
+        overRelaxation: 1.9,		            //TODO Make Changeable and part of FluidSimEuler
         obstacleX: 0.0,                         //initial Obstacle Postion
         obstacleY: 0.0,
         obstacleRadius: 0.15,			        //TODO Add different obstacles
@@ -82,7 +82,7 @@ function setupScene(sceneNr = 0)		//Always start with sceneNr = 0 aka Default-St
     var viscosity = viscosityValue;                                    //TODO Make changeable
 
 
-    fluidSimSetup = scene.fluidSim = new FluidSim(density, numX, numY, setupCellSize, viscosity);		    //Scene starts without a fluid, give it one
+    fluidSimSetup = scene.fluidSim = new FluidSimEuler(density, numX, numY, setupCellSize, viscosity);		    //Scene starts without a fluid, give it one
     var n = fluidSimSetup.numYCells;
 
 
@@ -230,10 +230,14 @@ function draw() {                                                  //TODO Break 
     minP = fluidSimDraw.pressureField[0];                               //set 'minP' to pressure value of the first cell. To have a starting value to compare
     maxP = fluidSimDraw.pressureField[0];                               //set 'maxP' to pressure value of the first cell.
 
+                                                                        // Initialize variables to store the coordinates of min and max pressure points
+
+
     for (var i = 0; i < fluidSimDraw.numCells; i++) {          //Go through each cell. Compare and update 'minP' and 'maxP'
         minP = Math.min(minP, fluidSimDraw.pressureField[i]);
         maxP = Math.max(maxP, fluidSimDraw.pressureField[i]);
     }
+    
 
     canvasImageData = canvas2DContext.getImageData(0, 0, canvas.width, canvas.height)
     var rgb_colorArray = [255, 255, 255, 255]                            //color array far later reference of values
@@ -548,16 +552,25 @@ canvas.addEventListener('touchmove', event => {
 
 document.addEventListener('keydown', event => {     //TODo make more visable, mabye add buttons
     switch (event.key) {
-        case 'p':
+        case 'p':                           //Stops simulation
             scene.paused = !scene.paused;
             break;
-        case 'm':
+        case 'm':                           //Moves simulation forward by one frame
             scene.paused = false;
             updateSimulation();
             scene.paused = true;
             break;     //Frame by frame
     }
 });
+
+// Event listener for the pause button
+document.getElementById('pauseButton').addEventListener('click', togglePause);
+
+// Event listener for the step button
+document.getElementById('stepButton').addEventListener('click', stepSimulation);
+
+// Event listener for the step button
+document.getElementById('startButton').addEventListener('click', toggleStart);
 
 function toggleStart()          //TODO add start button, function is never used
 {
@@ -567,6 +580,18 @@ function toggleStart()          //TODO add start button, function is never used
     else
         button.innerHTML = "Start";
     scene.paused = !scene.paused;
+}
+
+// Function to toggle pause/play
+function togglePause() {
+    scene.paused = !scene.paused;
+}
+
+// Function to step simulation forward by one frame
+function stepSimulation() {
+    scene.paused = false;
+    updateSimulation();
+    scene.paused = true;
 }
 
 // main -------------------------------------------------------

@@ -9,10 +9,9 @@
 3: Tutorials Page
 	Programming Tutorials for numerical methods und cfd basics. 
 	Fluid dynamics basics (12 Steps to naiver stokes)
+    Used and further usefull ressources
 
-4: Ressources Page
-	Used and further usefull ressources
 
-5: CFD & Numerics Glossary Page
+4: CFD & Numerics Glossary Page
 	Page explaining technical terms and concepts used. Linkin to wikipedia or similar.
 	Hyperlinks to glossary everywhere else on website

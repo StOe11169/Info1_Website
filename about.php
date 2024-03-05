@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Template</title>
+    <title>About</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/breadcrumbs.css">
@@ -15,48 +15,43 @@
 <div class="page-wrapper">
 
     <div class="header-wrapper">
+
         <?php include('elements/navbar.php') ?>
 
-        <nav aria-label="breadcrumb" >
+        <nav aria-label="breadcrumb">
             <ol class="breadcrumb breadcrumb-chevron p-3 bg-body-tertiary rounded-3">
                 <li class="breadcrumb-item">
                     <a href="index.php">Home</a>
                 </li>
                 <li class="breadcrumb-item">
-                    <a href="glossary.php">Glossary</a>
+                    <a>About</a>
                 </li>
             </ol>
         </nav>
+
+
+
     </div>
 
     <div class="main-wrapper">
 
         <!-- Sidebar Navigation-->
         <div class="sidenav-wrapper">
-            <nav class="sidenav">
-                <ul class="nav flex-column">
-                    <li class="nav-item" style="border-top: none">
-                        <a href="#home" class="nav-link" id="side-nav-home" >Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#section-1" class="nav-link side-nav-link" id="side-nav-sec-1">Section 1</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#section-2" class="nav-link side-nav-link" id="side-nav-sec-2">Section 2</a>
-                    </li>
-                    <li class="nav-item" style="border-bottom: solid black 1px">
-                        <a href="#section-3" class="nav-link side-nav-link" id="side-nav-sec-3">Section 3</a>
-                    </li>
-                    <!-- Add more links for other sections -->
-                </ul>
-            </nav>
 
 
         </div>
 
         <!------Main Page Content -->
         <div class="center-wrapper">
+            <h1>Disclaimer </h1>
+            <p>This website was created as part of a course project and is intended for educational purposes.
+                It is still a work in progress and may contain incomplete features, bugs, or inaccuracies. <br>
+                The content provided on this website is for demonstration and learning purposes only and should not be considered authoritative or relied upon for any purpose.
+            </p>
 
+            <h2> Purpose of this Website</h2>
+            <h2> Goals of this website</h2>
+            <h2>To-Do-List:</h2>
         </div>
 
         <!--Righthand spacer to align Page content -->

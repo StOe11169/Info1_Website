@@ -3,6 +3,15 @@ body {
     font-family: verdana, serif;
     font-size: 15px;
 }
+.simCanvas {
+    border:2px solid;
+    display: flex;
+    min-height: 75vh;
+    min-width: 75vw;
+}
+
+/*
+
 
 .button {
     background-color: #606060;
@@ -12,6 +21,52 @@ body {
     font-size: 16px;
     margin: 4px 2px;
     cursor: pointer;
+}
+*/
+
+
+
+.btn-primary{
+    color: #333333;
+    background-color: #f0f0f0;
+    border-color: #cccccc ;
+}
+
+.btn-primary:hover, checkbox-label:hover{
+    color: #333333;
+    background-color: #b0b0b0;
+    border-color: #999999;
+}
+
+btn-check:disabled
+{
+    background-color: ghostwhite;
+}
+
+.btn:disabled{
+    background-color: ghostwhite;
+    color: lightgrey;
+}
+
+.btn-check:checked + .btn, .btn.active, .btn.show, .btn:first-child:active, :not(.btn-check) + .btn:active {
+    color: #333333;
+    background-color: #d0d0d0;
+    border-color: #999999;
+}
+
+.sidebar-wrapper .list-group .button {
+    margin-bottom: 2px;
+}
+
+
+
+
+
+
+.slider-div {
+    background-color: #f0f0f0;
+    border: solid darkgray 1px;
+
 }
 
  .slider {
@@ -24,14 +79,11 @@ body {
      opacity: 0.7;
      -webkit-transition: .2s;
      transition: opacity .2s;
+     margin-top: 1vw;
+     margin-right: 1vw;
+     background-color: lightgrey;
  }
 
- .simCanvas {
-     border:2px solid;
-     display: flex;
-     min-height: 75vh;
-     min-width: 75vw;
- }
 
  .controlPanel {
      display: flex;
@@ -40,8 +92,10 @@ body {
      float: left;
  }
 
- .checkbox{
-
- }
+.checkbox-label {
+    display: block; /* Use flexbox for alignment */
+    padding-right: 1vw;
+    border: solid black 1px;
+}
 
 
