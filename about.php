@@ -49,9 +49,18 @@
                 The content provided on this website is for demonstration and learning purposes only and should not be considered authoritative or relied upon for any purpose.
             </p>
 
-            <h2> Purpose of this Website</h2>
-            <h2> Goals of this website</h2>
+            <h4> Purpose and Goals of this Website</h4>
+            <p> This website aims to be an educational tool and a resource hub for information about Computational Fluid Dynamics and numerical Mathematics for engineering purposes.
+                By hosting and explaining comparatively simple simulation programs right on the website, we hope to demonstrate an intuitive way on how one might approach problems and topics from this field.
+            </p>
+
             <h2>To-Do-List:</h2>
+            <h6>To-Do:Content</h6>
+            <p></p>
+            <h6>To-Do:Website</h6>
+            <p></p>
+            <h6>To-Do:Simulators</h6>
+            <p></p>
         </div>
 
         <!--Righthand spacer to align Page content -->

@@ -43,7 +43,7 @@
             <h1 style="margin-bottom: 5vw"> Some lorem ipsum bullshit</h1>
 
             <div class="card-wrapper smaller-tiles">
-                <a href="resources.php" class="card-anchor">
+                <a href="simSelect.php" class="card-anchor">
                     <div class="card tile">
                         <div class="card-img-wrapper">
                             <img class="card-img-top" src="images/jpg/pexels-md-sufiyan-3737018.jpg" alt="Card image cap">

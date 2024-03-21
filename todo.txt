@@ -1,0 +1,40 @@
+
+
+
+Euler Sim Todo:
+//TODO Update and expand GUI in general
+//TODO Add Show/Hide Button	showObstacle: false,		            
+//TODO Make Changeable	scene.obstacleRadius = 0.15;	
+//TODO Make changeable	scene.overRelaxation = 1.9;		
+//TODO: Text changes work, but image source doesn't change
+//TODO Sliding obstacle over source "blocks" it, moving obstacle into source does not.
+//TODO Change all finite difference methods to central difference method
+//TODO Maybe make difference methods modular
+//TODO Decouple render speed from canvas size
+//TODO Add method to control and compare different numerical methods
+//TODO Let canvas size vary but sim size stays same, only visually stretched
+//TODO Add 3D-Version with WebGl or p5.js
+//TODO decouple simulation speed from rendering speed
+//TODO Add dimensions to all physical units
+//TODO Make number of cells independent of sim cell size
+//TODO computeGradient can only handle one field at a tim => gradient of yVel and xVel calculated with different cells.
+//TODO add static pressure
+//TODO: Move solving of poisson-equation to its own function. Multiple iterations through all cells
+//TODO  Make optional (430, 44) this.pressureField.fill(0.0); to show why its necessary. Clear pressureField.
+//TODO Canvas stays small when you start in a small window. Influences fluid speed. window.innerWidth is browser specific/current window
+//TODO Make (45, 45) gravity: -9.81, Changeable and part of FluidSimEuler
+//TODO Make the timestep (46, 45) dt: 1.0 / 100.0, Changeable to show its effects on simulation collapse. 
+//TODO Make overRelaxation Changeable and part of FluidSimEuler-Class	
+//TODO Add different obstacles
+//TODO Tie starting value to database: densitiy										
+//TODO Tie starting value to database: viscosity                                    
+//TODO Make part of simulator-class and changeable scene.gravity = -9.81; 
+//TODO Make changeable, initial Velocity
+//TODO Make changeable. Diameter of the pipe
+//TODO Break down function draw() into smaler functions 
+//TODO Make step-size changeable / controll streamline density
+//TODO Separate FLIP-visualisation from simulator code
+//TODO Unify Simulator Visualisation
+
+
+

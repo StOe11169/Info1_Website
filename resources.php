@@ -32,9 +32,10 @@
         <!-- Sidebar Navigation-->
         <div class="sidenav-wrapper">
             <nav class="nav flex-column list-group list-group-flush overflow-auto sidenav">
-                <a href="#section-a" class="list-group-item list-group-item-action bg-light nav-link nav-item side-nav-link" id="side-nav-sec-a">A</a>
-                <a href="#section-b" class="list-group-item list-group-item-action bg-light nav-link nav-item side-nav-link" id="side-nav-sec-b">B</a>
-                <a href="#section-c" class="list-group-item list-group-item-action bg-light nav-link nav-item side-nav-link" id="side-nav-sec-c">C</a>
+                <a href="#section-a" class="list-group-item list-group-item-action bg-light nav-link nav-item side-nav-link" id="side-nav-sec-a">Programming Tutorials</a>
+                <a href="#section-b" class="list-group-item list-group-item-action bg-light nav-link nav-item side-nav-link" id="side-nav-sec-b">Fluid Basics</a>
+                <a href="#section-c" class="list-group-item list-group-item-action bg-light nav-link nav-item side-nav-link" id="side-nav-sec-c">Useful Resources</a>
+                <a href="#section-d" class="list-group-item list-group-item-action bg-light nav-link nav-item side-nav-link" id="side-nav-sec-d">Simulator Tutorials</a>
                 <!-- Add more links for other letters -->
             </nav>
         </div>

@@ -6,7 +6,7 @@
     <title>Euler Simulator</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-    <link rel="stylesheet" href="styles/sidebar.css">
+
     <link href="../styles/simulator.css" rel="stylesheet">
     <link href="../styles/style.css" rel="stylesheet">
     <link rel="stylesheet" href="styles/breadcrumbs.css">
@@ -15,13 +15,13 @@
 <div class="page-wrapper">
 
 
-    <div class="nav-container">
+    <div class="header-wrapper">
         <?php include('elements/navbar.php') ?>
 
         <nav aria-label="breadcrumb">
-            <ol class="breadcrumb p-3 bg-body-tertiary rounded-3">
+            <ol class="breadcrumb breadcrumb-chevron p-3 bg-body-tertiary rounded-3">
                 <li class="breadcrumb-item"><a href="index.php">Home</a></li>
-                <li class="breadcrumb-item"><a href="#">Simulators</a></li>
+                <li class="breadcrumb-item"><a href="simSelect.php">Simulators</a></li>
                 <li class="breadcrumb-item active" aria-current="page">Euler Simulator</li>
             </ol>
         </nav>
@@ -95,19 +95,16 @@
                 <label for="overrelaxButton" class="btn btn-outline-primary checkbox-label"> Overrelax: </label>
 
 
-                <button type="button" class="button btn btn-primary" data-bs-toggle="button" aria-pressed="false"
-                        autocomplete="off" id="pauseButton">Pause
-                </button>
-                <button class="button btn btn-primary" data-bs-toggle="button" aria-pressed="false" autocomplete="off"
-                        id="stepButton">Step
-                </button>
-                <button class="button btn btn-primary" data-bs-toggle="button" aria-pressed="false" autocomplete="off"
-                        id="startButton"> Stop
-                </button>
-                <button class="button btn btn-primary" data-bs-toggle="button" aria-pressed="false" autocomplete="off"
-                        id="resultsButton" disabled> Save Results
-                </button>
 
+                <button class="button btn btn-primary " data-bs-toggle="button" aria-pressed="false" autocomplete="off"
+                        id="stepButtonEuler">Step <img src="images/svg/arrow-right-square.svg">
+                </button>
+                <button class="button btn btn-primary" data-bs-toggle="button" aria-pressed="false" autocomplete="off"
+                        id="startStopButtonEuler"> Stop <img src="images/svg/pause-btn.svg">
+                </button>
+                <button class="button btn btn-primary" data-bs-toggle="button" aria-pressed="false" autocomplete="off"
+                        id="saveButtonEuler" disabled> Save Results
+                </button>
             </div>
 
             <!-- Sim Canvas -->
@@ -116,24 +113,9 @@
                 <script src="../scripts/FluidSimEuler.js"></script>
                 <script src="../scripts/visualisationEuler.js"></script>
                 <script>
-
-                    //TODO Sliding obstacle over source "blocks" it, moving obstacle into source does not.
-                    //TODO Change all finite difference methods to central difference method
-                    //TODO Maybe make difference methods modular
-                    //TODO Decouple render speed from canvas size
-                    //TODO Add method to control and compare different numerical methods
-                    //TODO Let canvas size vary but sim size stays same, only visually stretched
-                    //TODO 3D with WebGl or p5.js
-                    //TODO Update and expand GUI
-                    //TODO decouple simulation speed from rendering speed
-                    //TODO Add dimensions to all physical units
-                    //TODO Make number of cells independent of sim cell size
-                    //TODO Check if dynamic viscosity and kinematic viscosity have not been falsly used.
-                    //! dynamic visocsity = kinematic viscosity * density. my = ny * rho
-
                     setupScene(1);
-                    runSimulationLoop();
 
+                    runSimulationLoop();
                 </script>
             </div>
             <!--End of Canvas -->

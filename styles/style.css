@@ -68,9 +68,7 @@ html, body {            /*Ensure html-page and body take up the whole viewport*/
     min-width: 10vw;
     flex-shrink: 0;
     height: 100%;
-
     overflow-x: auto;
-
 }
 
 .sidenav {
@@ -81,8 +79,8 @@ html, body {            /*Ensure html-page and body take up the whole viewport*/
     background-color: ghostwhite;
     overflow-y: auto; /* make scrollable */
     left: 0;
-    border-right: 1px solid lightslategray;
     position: fixed;
+    border-right: solid slategray 1px;
 }
 
 .side-nav-link.active {
@@ -108,8 +106,9 @@ html, body {            /*Ensure html-page and body take up the whole viewport*/
 /* Navigation link */
 .sidenav a {
     text-decoration: none; /* Remove underline from links */
-    color: #333; /* Default link color */
+    color: #333333; /* Default link color */
     display: block; /* Make links block-level elements for full width */
+
 }
 
 /* Hover effect for navigation links */
@@ -138,6 +137,7 @@ html, body {            /*Ensure html-page and body take up the whole viewport*/
     flex: 0 0 auto;
     background-color: ghostwhite;
     height: 100vh;
+    border-left: solid slategray 1px;;
 }
 
 /*----- Footer -----*/

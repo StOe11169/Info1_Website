@@ -60,7 +60,7 @@ class FluidSimEuler {
         var n = this.numYCells;
         var gradient = (field[i * n + j] - field[(i + 1) * n + j]) / this.cellSize;
         return gradient;
-        //TODO can only handle one field, gradient of yVel and xVel calculatet with different cells.
+        //TODO can only handle one field, gradient of yVel and xVel calculated with different cells.
     }
 
 
@@ -438,6 +438,35 @@ class FluidSimEuler {
         this.advectSmoke(dt);
         this.newXVel.fill(0.0);
         this.newYVel.fill(0.0);
+        this.calculateFieldStats("Pressure Field", this.pressureField, scene.frameNr);
 
     }
+
+
+// Method to calculate statistics (max, min, avg) and their coordinates for any given field
+    calculateFieldStats(fieldName, field, frameNumber) {
+        let max = Math.max(...field);
+        let min = Math.min(...field);
+        let sum = field.reduce((acc, curr) => acc + curr, 0);
+        let avg = sum / field.length;
+
+        // Find the index of the cell with the maximum value
+        let maxIndex = field.indexOf(max);
+        let maxRowIndex = Math.floor(maxIndex / this.numXCells);
+        let maxColIndex = maxIndex % this.numXCells;
+
+        // Find the index of the cell with the minimum value
+        let minIndex = field.indexOf(min);
+        let minRowIndex = Math.floor(minIndex / this.numXCells);
+        let minColIndex = minIndex % this.numXCells;
+
+
+        // Print statistics
+        console.log(`Frame Number: ${frameNumber}`);
+        console.log(`${fieldName} Statistics:`);
+        console.log(`  Maximum Value: ${max} at (${maxColIndex}, ${maxRowIndex})`);
+        console.log(`  Minimum Value: ${min} at (${minColIndex}, ${minRowIndex})`);
+        console.log(`  Average Value: ${avg}`);
+    }
+
 }

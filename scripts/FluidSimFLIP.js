@@ -1069,23 +1069,28 @@
 }
 });
 
-    // Event listener for the  buttons
-    document.getElementById('pauseButton').addEventListener('click', togglePause);
+     //Event listener for the step button
+     document.getElementById('stepButtonFLIP').addEventListener('click', stepSimulation);
 
-    // Event listener for the step button
-    document.getElementById('stepButton').addEventListener('click', stepSimulation);
-
-    // Event listener for the step button
-    document.getElementById('startButton').addEventListener('click', toggleStart);
+    // Event listener for the startStopButton button
+     document.getElementById('startStopButtonFLIP').addEventListener('click', toggleStart);
 
     function toggleStart()
     {
-        var button = document.getElementById('startButton');
+        var button = document.getElementById('startStopButtonFLIP');
         if (scene.paused)
         button.innerHTML = "Stop";
         else
         button.innerHTML = "Start";
         scene.paused = !scene.paused;
+    }
+
+    // Function to step simulation forward by one frame
+    //TODO: Starts simulation instead of moving it by one frame
+    function stepSimulation() {
+        scene.paused = false;
+        updateSimulation();
+        scene.paused = true;
     }
 
     // main -------------------------------------------------------

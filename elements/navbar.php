@@ -1,5 +1,5 @@
 
-<nav class="navbar navbar-expand-lg navbar-light"  >
+<nav class="navbar navbar-expand-lg navbar-light"  style="background-color: cornflowerblue" >
   <div class="container-fluid">
   <div class="d-flex flex-row" >
     <a class="navbar-brand" href="#">

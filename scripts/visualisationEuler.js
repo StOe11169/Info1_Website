@@ -47,7 +47,7 @@ var scene =			                            //TODO Make this into diffrent functio
         numIters: 100,
         frameNr: 0,
         overRelaxation: 1.9,		            //TODO Make Changeable and part of FluidSimEuler
-        obstacleX: 0.0,                         //initial Obstacle Postion
+        obstacleX: 0.0,                         //initial Obstacle Position
         obstacleY: 0.0,
         obstacleRadius: 0.15,			        //TODO Add different obstacles
         paused: false,				            //TODO Add Pause Button
@@ -167,7 +167,7 @@ function setupScene(sceneNr = 0)		//Always start with sceneNr = 0 aka Default-St
 
 
 // draw -------------------------------------------------------
-//! Reminder "c" ist the canvas
+//! Reminder "c" is the canvas
 
 function setColor(r, g, b) {
     canvas2DContext.fillStyle = `rgb(
@@ -563,29 +563,37 @@ document.addEventListener('keydown', event => {     //TODo make more visable, ma
     }
 });
 
-// Event listener for the pause button
-document.getElementById('pauseButton').addEventListener('click', togglePause);
+
 
 // Event listener for the step button
-document.getElementById('stepButton').addEventListener('click', stepSimulation);
+document.getElementById('stepButtonEuler').addEventListener('click', stepSimulation);
 
-// Event listener for the step button
-document.getElementById('startButton').addEventListener('click', toggleStart);
+// Event listener for the start/stop button
+document.getElementById('startStopButtonEuler').addEventListener('click', toggleStart);
 
-function toggleStart()          //TODO add start button, function is never used
+
+
+//Pauses scene and changes the button text and image, when pressed
+//TODO: Text changes work, but image source doesn't change
+function toggleStart()
 {
-    var button = document.getElementById('startButton');
-    if (scene.paused)
+    console.log("toggleStart clicked")
+    let button = document.getElementById('startStopButtonEuler');
+    let img = document.querySelector('#startStopButtonEuler img');
+
+    if (scene.paused){
         button.innerHTML = "Stop";
-    else
+        img.src ='images/svg/pause-btn.svg';
+    }
+    else {
         button.innerHTML = "Start";
-    scene.paused = !scene.paused;
+        scene.paused = !scene.paused;
+        img.src = 'images/svg/play-btn.svg';
+    }
 }
 
-// Function to toggle pause/play
-function togglePause() {
-    scene.paused = !scene.paused;
-}
+
+
 
 // Function to step simulation forward by one frame
 function stepSimulation() {
@@ -608,3 +616,4 @@ function runSimulationLoop() {     //infinite loop
     //setTimeout(draw(), 5000);
     requestAnimationFrame(runSimulationLoop); //calls runSimulationLoop again, which calls requestAnimationFrame again
 }
+

@@ -15,7 +15,6 @@ window.addEventListener('scroll', function() {
 });
 
 
-// Event listener for accordion item clicks
 
 
 
@@ -98,15 +97,14 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Function to toggle the visibility of the "Close all" button
     function toggleCloseAllBtn() {
-        if (checkAccordions()) {
-            closeAllBtn.style.display = 'block';
-        } else {
-            closeAllBtn.style.display = 'none';
+        if (closeAllBtn) { // Check if closeAllBtn exists
+            if (checkAccordions()) {
+                closeAllBtn.style.display = 'block';
+            } else {
+                closeAllBtn.style.display = 'none';
+            }
         }
     }
-
-
-
 
     // Event listener for accordion state changes
     accordions.forEach(function (accordion) {
@@ -119,13 +117,16 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     // Event listener for "Close all" button click
-    closeAllBtn.addEventListener('click', function () {
-        accordions.forEach(function (accordion) {
-            accordion.classList.remove('show');
+    if (closeAllBtn) { // Check if closeAllBtn exists
+        closeAllBtn.addEventListener('click', function () {
+            accordions.forEach(function (accordion) {
+                accordion.classList.remove('show');
+            });
+            toggleCloseAllBtn();
         });
-        toggleCloseAllBtn();
-    });
+    }
 });
+
 
 //----------------------------------------------------------------------------------
 
