@@ -14,14 +14,6 @@ window.addEventListener('scroll', function() {
     }
 });
 
-
-
-
-
-
-
-
-
 //----- Button Functionality -----
 // Get the buttons:
 let scrollToTopButtons = document.getElementsByClassName("scroll-to-top-btn");
@@ -145,9 +137,10 @@ document.addEventListener("DOMContentLoaded", function() {
         // Extract the href path and compare with the current path
         let linkPath = new URL(link.href).pathname;
 
-        // Output current path and link path to console
+        /* Output current path and link path to console
         console.log("Current path:", currentPath);
         console.log("Link path:", linkPath);
+         */
 
         if (linkPath === currentPath) {
             link.classList.add('active');

@@ -40,7 +40,14 @@
 
         <!------Main Page Content -->
         <div class="center-wrapper">
-            <h1 style="margin-bottom: 5vw"> Some lorem ipsum bullshit</h1>
+            <div style="margin-bottom: 1vw; display: flex; justify-content: flex-start; align-items: flex-start;">
+                <img src="images/svg/flowLogo.svg" style="width: 10%; height: auto;">
+                <img src="images/svg/flowAcronymText.svg" style="width: 10%; height: auto;">
+            </div>
+
+            <p style="margin-bottom: 3vh"> <h4>Welcome to F.L.O.W</h4>  An online platform to learn about computational fluid dynamics. <br>
+            This page is still a work in progress and has a long way to go, but please select one of the tiles below
+            to see the content that's already available.</p>
 
             <div class="card-wrapper smaller-tiles">
                 <a href="simSelect.php" class="card-anchor">
@@ -91,7 +98,7 @@
                 <a href="resources.php" class="card-anchor">
                     <div class="card tile">
                         <div class="card-img-wrapper">
-                            <img class="card-img-top" src="images/jpg/placeholder%20cat.jpg" alt="Card image cap">
+                            <img class="card-img-top" src="images/jpg/pexels-lukas-590022.jpg" alt="Card image cap">
                         </div>
                         <div class="card-body">
                             <h5 class="card-title"><img src="images/svg/question-circle.svg"> About</h5>

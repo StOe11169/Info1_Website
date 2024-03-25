@@ -1,6 +1,10 @@
 
 <div class="col-6 footer-left" >
     <button onclick="scrollToTop()" id="scrollToTopBtn" class="scroll-to-top-btn btn btn-primary" title="Go to top">Back up</button>
+    <p>This simulator is based upon the work by Mathias Müller/TenMinutePhysics, which you can look up here: <br>
+    <?php if (!empty($referenceLink)) : ?>
+        <a href="<?php echo $referenceLink; ?>" target="_blank"><?php echo $referenceLink; ?></a>
+    <?php endif; ?>
 </div>
 
 <div class="col-6 footer-right">

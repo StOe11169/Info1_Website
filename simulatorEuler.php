@@ -114,7 +114,6 @@
                 <script src="../scripts/visualisationEuler.js"></script>
                 <script>
                     setupScene(1);
-
                     runSimulationLoop();
                 </script>
             </div>
@@ -122,7 +121,13 @@
         </div>
         <!--End Page Content and content-container -->
     </div>
+
+    <div class="footer-wrapper">
+        <?php $referenceLink = "https://matthias-research.github.io/pages/tenMinutePhysics/index.html";?>
+        <?php include('elements/footer.php') ?>
+    </div>
 </div>
+
 
 
 <script src="../scripts/main.js"></script>

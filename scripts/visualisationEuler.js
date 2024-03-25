@@ -163,6 +163,10 @@ function setupScene(sceneNr = 0)		//Always start with sceneNr = 0 aka Default-St
     document.getElementById("pressureButton").checked = scene.showPressure;
     document.getElementById("smokeButton").checked = scene.showSmoke;
     document.getElementById("overrelaxButton").checked = scene.overRelaxation > 1.0;
+
+    simParameters(density, viscosity, scene.dt, res, numX, numY, setupCellSize, scene.overRelaxation);
+
+
 }
 
 
@@ -617,3 +621,13 @@ function runSimulationLoop() {     //infinite loop
     requestAnimationFrame(runSimulationLoop); //calls runSimulationLoop again, which calls requestAnimationFrame again
 }
 
+function simParameters (density, viscosity, dt, res, numX, numY, setupCellSize, overRelaxation) {
+    console.log("numXCells", numX);
+    console.log("numYCells", numY);
+    console.log("Timestep", dt);
+    console.log("Res", res);
+    console.log("cell size", setupCellSize);
+    console.log("OR", overRelaxation);
+    console.log("dens", density);
+    console.log("vis", viscosity);
+}

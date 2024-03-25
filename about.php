@@ -56,11 +56,75 @@
 
             <h2>To-Do-List:</h2>
             <h6>To-Do:Content</h6>
-            <p></p>
+            <p>
+                <ul>
+                <li>Fill Glossary</li>
+                <li>Rework Tutorials to use Jupyter Notebooks</li>
+                <li>Add more simulators
+                    <ul style="list-style-type: square;margin-left: 2em">
+                        <li>Add simulators with different approaches</li>
+                        <li>Add more simplistic variants of simulators</li>
+                    </ul>
+                </li>
+            </ul>
+            </p>
             <h6>To-Do:Website</h6>
-            <p></p>
+            <p>
+                <ul>
+                <li>Add localisation</li>
+                <li>Rework Structure</li>
+                <li>Implement active-link highlighting</li>
+                <li>Add database connection (MySQL)</li>
+                <li>Move to provider or setup local XAMPP-Server</li>
+            </ul>
+            </p>
             <h6>To-Do:Simulators</h6>
-            <p></p>
+            <p>
+            <ul>
+                <li>Update and expand GUI in general</li>
+                <li>Implement Save button and hook up database</li>
+                <li>Add fluid selection in addition to sliders.
+                    <ul style="list-style-type: square;margin-left: 2em">
+                        <li>Sliders default to selected values of chosen fluid</li>
+                        <li>Add reset button</li>
+                        <li>Research: How to display changing viscosity and density in results/database? </li>
+                    </ul>
+                </li>
+                <li>Add Show/Hide Button	showObstacle: false,</li>
+                <li>Make Changeable	scene.obstacleRadius = 0.15;</li>
+                <li>Make changeable	scene.overRelaxation = 1.9;</li>
+                <li>Text changes work, but image source doesn't change</li>
+                <li>Sliding obstacle over source "blocks" it, moving obstacle into source does not.</li>
+                <li>Change all finite difference methods to central difference method</li>
+                <li>Maybe make difference methods modular</li>
+                <li>Decouple render speed from canvas size</li>
+                <li>/Add method to control and compare different numerical methods</li>
+                <li>Let canvas size vary but sim size stays same, only visually stretched</li>
+                <li>Add 3D-Version with WebGl or p5.js</li>
+                <li>decouple simulation speed from rendering speed</li>
+                <li>Add dimensions to all physical units</li>
+                <li>Make number of cells independent of sim cell size</li>
+                <li>computeGradient can only handle one field at a tim => gradient of yVel and xVel calculated with different cells.</li>
+                <li>Add static pressure</li>
+                <li>Move solving of poisson-equation to its own function. Multiple iterations through all cells</li>
+                <li>Make optional (430, 44) this.pressureField.fill(0.0); to show why its necessary. Clear pressureField.</li>
+                <li>Canvas stays small when you start in a small window. Influences fluid speed. window.innerWidth is browser specific/current window</li>
+                <li>Make (45, 45) gravity: -9.81, Changeable and part of FluidSimEuler</li>
+                <li>Make the timestep (46, 45) dt: 1.0 / 100.0, Changeable to show its effects on simulation collapse.</li>
+                <li>Make overRelaxation Changeable and part of FluidSimEuler-Class</li>
+                <li>Add different obstacles</li>
+                <li>Tie starting value to database: densitiy</li>
+                <li>Tie starting value to database: viscosity</li>
+                <li>Make part of simulator-class and changeable scene.gravity = -9.81;</li>
+                <li>Make changeable, initial Velocity</li>
+                <li>Make changeable. Diameter of the pipe</li>
+                <li>Break down function draw() into smaler functions</li>
+                <li>Make step-size changeable / controll streamline density</li>
+                <li>Separate FLIP-visualisation from simulator code</li>
+                <li>Unify Simulator Visualisation</li>
+            </ul>
+
+            </p>
         </div>
 
         <!--Righthand spacer to align Page content -->
