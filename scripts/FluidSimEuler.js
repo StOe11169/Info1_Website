@@ -428,18 +428,19 @@ class FluidSimEuler {
         this.solvePressureField(this.pressureField, this.xVel, this.yVel, dt);
         this.addPressureTerm(dt);
         this.pressureField.fill(0.0);				//TODO  Make optional to show why its necessary. Clear pressureField.
-        console.log("Max_Xvel, before incomp.: " + Math.max(...this.xVel));
+        //console.log("Max_Xvel, before incomp.: " + Math.max(...this.xVel));
         this.forceIncompressibility(numIters, dt);
         //this.newforceIncompressibility(numIters, dt, viscosity);  //Remove comments two switch between function implementations. newforceIncompressibility() currently not working correctly.
-        console.log("Max_Xvel, after incomp.: " + Math.max(...this.xVel));
+        //console.log("Max_Xvel, after incomp.: " + Math.max(...this.xVel));
 
         this.applyBoundaryCondition();
         this.advectVelocity(dt);
         this.advectSmoke(dt);
         this.newXVel.fill(0.0);
         this.newYVel.fill(0.0);
-        this.calculateFieldStats("Pressure Field", this.pressureField, scene.frameNr);
-
+        this.calculateFieldStats("Pressure", this.pressureField, scene.frameNr);
+        this.calculateFieldStats("X-Velocity", this.xVel, scene.frameNr);
+        this.calculateFieldStats("Y-Velocity", this.yVel, scene.frameNr);
     }
 
 
@@ -462,11 +463,12 @@ class FluidSimEuler {
 
 
         // Print statistics
-        console.log(`Frame Number: ${frameNumber}`);
-        console.log(`${fieldName} Statistics:`);
-        console.log(`  Maximum Value: ${max} at (${maxColIndex}, ${maxRowIndex})`);
-        console.log(`  Minimum Value: ${min} at (${minColIndex}, ${minRowIndex})`);
-        console.log(`  Average Value: ${avg}`);
+
+        console.log(`max,${max},${frameNumber},${maxColIndex},${maxRowIndex},${fieldName}`);
+        console.log(`min,${min},${frameNumber},${minColIndex},${minRowIndex},${fieldName}`);
+        console.log(`avg,${avg},${frameNumber},'NAN', NAN', ${fieldName}`);
     }
+
+
 
 }

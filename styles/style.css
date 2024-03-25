@@ -51,6 +51,12 @@ html, body {            /*Ensure html-page and body take up the whole viewport*/
     color: white;
 }
 
+.navbar-logo {
+    height: 2.5em;
+    width: auto;
+    margin-right: 0.1em; /* Optional: Add spacing between logos */
+}
+
 .breadcrumb .breadcrumb-item:first-child {
     padding-left: 5px;
 }

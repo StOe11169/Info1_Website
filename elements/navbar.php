@@ -2,9 +2,8 @@
 <nav class="navbar navbar-expand-lg navbar-light"  style="background-color: cornflowerblue" >
   <div class="container-fluid">
   <div class="d-flex flex-row" >
-    <a class="navbar-brand" href="#">
-      <img height="20px" width="20px" src="/images/svg/flowLogo.svg">
-      <img height="20px" width="30px" src="/images/svg/flowAcronymText.svg">
+    <a class="navbar-brand" href="#" style="height: 100%; width: 100%;">
+      <img class="navbar-logo" src="/images/svg/flowLogo.svg">
     </a>
 
 

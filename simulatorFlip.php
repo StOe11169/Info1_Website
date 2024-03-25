@@ -101,6 +101,7 @@
     </div>
 
     <div class="footer-wrapper">
+        <?php $referenceLink = "https://matthias-research.github.io/pages/tenMinutePhysics/index.html";?>
         <?php include('elements/footer.php') ?>
     </div>
 
